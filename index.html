@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            max-width: 400px;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1s infinite alternate;
+            display: inline-block;
+        }
+        .heart1 {
+            color: red;
+            font-size: 20px;
+            animation: heartbeat 1s infinite alternate;
+            display: inline-block;
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: darkred;
+        }
+        .extra-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: darkred;
+        }
+        #message1{
+            text-align: justify;
+        }
+        #message2{
+            text-align: center;
+          display: block;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background: red;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        .poem {
+            font-size: 16px;
+            color: darkred;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Belated Happy Valentine's Day! <span class="heart1">💕</span></h2>
+        <div class="heart">❤️</div>
+        <p>You are loved more than words can say!</p>
+        <div class="poem">
+            Roses are red, violets are blue,<br>
+            My world is brighter because of you.
+        </div>
+        <button class="btn" onclick="revealMessage()">Click for a Surprise</button>
+        <div class="hidden-message" id="message">
+            <p>You make my world brighter every day! 🌟 <br>
+               I will love you always! <span class="heart1">❤️</span><br>
+               You always make me smile! 😊 <br>
+              Forever and always, my heart belongs to you! <span class="heart1">💖</span></p>
+            <div class="image-container">
+                <img src="Us.jpg" alt="Valentine's Image">
+            </div>
+            <button class="btn" onclick="revealExtraMessage()">More Love</button>
+            <div class="extra-message" id="extra-message">
+                <p id="message1">Sorry kung hindi kita nabati ha. Alam kung late na to pero babatiin pa rin kita ng:<br><br>
+                <span id="message2">Happy Valentine's Day <span class="heart1">❤️</span></span> <br><br>
+                Para sa'kin ay Valentine's Day tuwing tayo ay magkasama. Hindi 'man ako sobrang romantic pero gusto kong malaman mo na 
+                mamahalin kita sa sarili kong paraan. At lagi mong tandaan na mahal na mahal kita!<br><br>
+                Sisikapin ko na mag-improve pagdating sa career aspect para sa akin at para sa future natin. Sana ay kaya mo pa akong
+                mahintay pa ng kaunti. Pero di kita masisisi kung mainip ka na at iwan ako. Basta lagi ko lang ipapaalala sayo na mahal 
+                na mahal kita.<br><br>
+                I will always be loving you until the end of my time! <span class="heart1">❤️</span> <br> <br> 
+                Nagmamahal,<br>
+                Elbert</p>
+            </div>
+        </div>
+        <div class="footer">
+            Made with <span class="heart1">❤️</span> for someone special
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+        function revealExtraMessage() {
+            document.getElementById('extra-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
